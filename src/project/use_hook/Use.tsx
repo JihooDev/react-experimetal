@@ -1,8 +1,20 @@
-import { ReactElement } from 'react'
+import { ReactElement, use } from 'react'
+import { getTeamData } from '../../api/api'
+import { TeamDataTypes } from '../../types/types';
+
 
 const Use = (): ReactElement => {
+
+    const teamData = use<TeamDataTypes>(getTeamData);
+
     return (
-        <div>Use</div>
+        <div>
+            {
+                teamData.map(value => (
+                    <h1 key={value}>{value}</h1>
+                ))
+            }
+        </div>
     )
 }
 
