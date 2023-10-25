@@ -1,10 +1,9 @@
-import { ReactElement, use } from 'react'
+import { ReactElement, use, useEffect, useState } from 'react'
 import { getTeamData } from '../../api/api'
 import { TeamDataTypes } from '../../types/types';
 
 
 const Use = (): ReactElement => {
-
     const teamData = use<TeamDataTypes>(getTeamData);
 
     return (
