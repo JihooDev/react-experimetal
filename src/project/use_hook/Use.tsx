@@ -1,4 +1,4 @@
-import { ReactElement, use, useEffect, useState } from 'react'
+import { ReactElement, use } from 'react'
 import { getTeamData } from '../../api/api'
 import { TeamDataTypes } from '../../types/types';
 
